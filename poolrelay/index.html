@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Pool Light Color Selector</title>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<meta name = "viewport" content = "width = device-width">
+<meta name = "viewport" content = "width = 320">
+
+</head>
+
+<script type="text/javascript">
+
+function functionOn(){
+$.get( "http://192.168.0.200:3000/functionOn", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionOff(){
+$.get( "http://192.168.0.200:3000/functionOff", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionOne(){
+$.get( "http://192.168.0.200:3000/functionone", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionTwo(){
+$.get( "http://192.168.0.200:3000/functiontwo", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionThree(){
+$.get( "http://192.168.0.200:3000/functionthree", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionFour(){
+$.get( "http://192.168.0.200:3000/functionfour", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionFive(){
+$.get( "http://192.168.0.200:3000/functionfive", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionSix(){
+$.get( "http://192.168.0.200:3000/functionsix", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionSeven(){
+$.get( "http://192.168.0.200:3000/functionseven", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionEight(){
+$.get( "http://192.168.0.200:3000/functioneight", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionNine(){
+$.get( "http://192.168.0.200:3000/functionnine", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionTen(){
+$.get( "http://192.168.0.200:3000/functionten", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionEleven(){
+$.get( "http://192.168.0.200:3000/functioneleven", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionTwelve(){
+$.get( "http://192.168.0.200:3000/functiontwelve", function( data ) {
+  alert( "Load was performed." );
+});
+};
+function functionThirteen(){
+$.get( "http://192.168.0.200:3000/functionthirteen", function( data ) {
+  alert( "Load was performed." );
+});
+};
+
+
+</script>
+
+<body>
+
+<button onclick="functionOn()">Turn light on</button>
+<button onclick="functionOff()">Turn light off</button>
+<p>
+
+
+<table style="width:100%">
+  <tr>
+	<td><button onclick="functionOne()">SAm</button></td>
+	<td>1. SAm Mode: Cycles through white, magenta, blue and green colors.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionTwo()">Party</button></td>
+	<td>2. Party Mode: Rapid color changing.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionThree()">Romance</button></td>
+	<td>3. Romance Mode: Slow color transitions.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionFour()">Caribbean</button></td>
+	<td>4. Caribbean Mode: Blues and greens.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionFive()">American</button></td>
+	<td>5. American Mode: Patriotic red, white and blue transition.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionSix()">Sunset</button></td>
+	<td>6. Californa Sunset Mode: Orange, red and magenta tones.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionSeven()">Royal</button></td>
+	<td>7. Royal Mode: Richer, deeper color tones.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionEight()">Blue</button></td>
+	<td>8. Blue: Fixed color.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionNine()">Green</button></td>
+	<td>9. Green: Fixed color.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionTen()">Red</button></td>
+	<td>10. Red: Fixed color.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionEleven()">White</button></td>
+	<td>11. White: Fixed color.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionTwelve()">Magenta</button></td>
+	<td>12. Magenta: Fixed color.</td>
+  </tr>
+  <tr>
+	<td><button onclick="functionThirteen()">Hold</button></td>
+	<td>13. Hold: Save the current color effect.</td>
+  </tr>
+  <tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+var switchRelayTwo = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 2');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 2 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 600); // duration in mS
+
+                currentSelection = 2;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayThree = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 3');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 3 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 800); // duration in mS
+
+                currentSelection = 3;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+
+var switchRelayFour = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 4');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 4 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 1000); // duration in mS
+
+                currentSelection = 4;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+
+var switchRelayFive = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 5');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 5 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 1200); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+
+var switchRelaySix = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 6');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 6 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 1400); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+
+var switchRelaySeven = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 7');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 7 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 1600); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayEight = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 8');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 8 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 1800); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayNine = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 9');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+
+                        console.log('blinking 9 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 2000); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayTen = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 10');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 10 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 2200); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayEleven = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 11');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 11 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 2400); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayTwelve = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 12');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 12 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 2600); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+var switchRelayThirteen = function(){
+        if(isOn){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                var on = 1;
+                console.log('Running relay option 13');
+
+                intervalId = setInterval( function(){
+                        gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+                        on = (on + 1) % 2;
+                        });
+                }, 200);
+                });
+
+                durationId= setTimeout( function(){
+                        clearInterval(intervalId);
+                        clearTimeout(durationId);
+                        console.log('blinking 13 completed');
+                        gpio.write(gpioPin, 1, function() { // leave pin16 on
+                        });
+                }, 2800); // duration in mS
+
+                currentSelection = 1;
+        } else {
+                console.log('Turn it on first');
+                }
+}
+

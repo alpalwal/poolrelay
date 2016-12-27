@@ -1,0 +1,49 @@
+var gpio = require("pi-gpio");
+var http = require('http');
+var express = require('express');
+var app = express();
+var gpioPin = 16;  
+var isOpened=false; 
+var unlockRelay = function(){ 
+if(!isOpened){
+
+gpio.close(gpioPin)
+// open pin 16 for output
+//
+gpio.open(gpioPin, "output", function(err) {
+var on = 1;
+console.log('GPIO pin '+gpioPin+' is open. toggling LED every 100 mS for 10s');
+
+intervalId = setInterval( function(){
+  gpio.write(gpioPin, on, function() { // toggle pin between high (1) and low (0)
+    on = (on + 1) % 2;
+    });
+  }, 100);
+});
+
+durationId= setTimeout( function(){
+  clearInterval(intervalId);
+  clearTimeout(durationId);
+  console.log('10 seconds blinking completed');
+  gpio.write(gpioPin, 0, function() { // turn off pin 16
+    gpio.close(gpioPin); // then Close pin 16
+    process.exit(0); // and terminate the program
+  });
+}, 10000); // duration in mS
+
+
+
+
+
+
+
+
+
+    }
+}
+app.get('/unlock/', function(req, res){ 
+	console.log("unlock relay");
+        unlockRelay();
+ });
+app.listen(3000); 
+console.log('App Server running at port 3000');

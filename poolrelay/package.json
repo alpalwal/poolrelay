@@ -1,0 +1,15 @@
+{
+  "name": "poolrelay",
+  "version": "1.0.0",
+  "description": "poolrelay",
+  "main": "index.js",
+  "dependencies": {
+    "pi-gpio": "^0.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,144 @@
+var gpio = require("pi-gpio");
+var http = require('http');
+var express = require('express');
+var app = express();
+var gpioPin = 16;  
+var isOn = false; 
+var currentSelection = 1;
+
+
+var switchRelayOn = function(){
+	if(!isOn){
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                	gpio.write(gpioPin, 1, function() { 
+                	});
+                });
+                console.log('turn on completed');
+                isOn = true;
+	}
+}
+var switchRelayOff = function(){
+                gpio.close(gpioPin); // then Close pin 16
+                gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+                // open pin 16 for output
+                gpio.open(gpioPin, "output", function(err) {
+                        gpio.write(gpioPin, 0, function() {
+                        });
+                });
+                console.log('turn off completed');
+                isOn = false;
+}
+
+var switchRelayOne = function(){ 
+	if(isOn){
+//		gpio.close(gpioPin); // then Close pin 16
+		gpio.write(gpioPin, 0, function() {}); // leave pin16 off
+		// open pin 16 for output
+		gpio.open(gpioPin, "output", function(err) {
+		var on = 1;
+		
+		intervalId = setInterval( function(){
+			gpio.write(gpioPin, on, function() { // switch between high (1) and low (0)
+    			on = (on + 1) % 2;
+    			});
+  		}, 200);
+		});
+	
+		durationId= setTimeout( function(){
+			clearInterval(intervalId);
+			clearTimeout(durationId);
+			console.log('blinking 1 completed');
+			gpio.write(gpioPin, 1, function() { // leave pin16 on
+		  	});
+		}, 400); // duration in mS
+	
+		currentSelection = 1;
+    	} else {
+		console.log('Turn it on first');
+		}
+}
+
+
+
+
+app.get('/functionone/', function(req, res){ 
+	console.log("running switching option 1");
+        switchRelayOne();
+	res.status(202).end();
+ });
+app.get('/functiontwo/', function(req, res){ 
+	console.log("running switching option 2");
+        switchRelayTwo();
+	res.status(202).end();
+ });
+app.get('/functionthree/', function(req, res){ 
+	console.log("running switching option 3");
+        switchRelayThree();
+	res.status(202).end();
+ });
+app.get('/functionfour/', function(req, res){ 
+	console.log("running switching option 4");
+        switchRelayFour();
+	res.status(202).end();
+ });
+app.get('/functionfive/', function(req, res){ 
+	console.log("running switching option 5");
+        switchRelayFive();
+	res.status(202).end();
+ });
+app.get('/functionsix/', function(req, res){ 
+	console.log("running switching option 6");
+        switchRelaySix();
+	res.status(202).end();
+ });
+app.get('/functionseven/', function(req, res){ 
+	console.log("running switching option 7");
+        switchRelaySeven();
+	res.status(202).end();
+ });
+app.get('/functioneight/', function(req, res){ 
+	console.log("running switching option 8");
+        switchRelayEight();
+	res.status(202).end();
+ });
+app.get('/functionnine/', function(req, res){ 
+	console.log("running switching option 9");
+        switchRelayNine();
+	res.status(202).end();
+ });
+app.get('/functionten/', function(req, res){ 
+	console.log("running switching option 10");
+        switchRelayTen();
+	res.status(202).end();
+ });
+app.get('/functioneleven/', function(req, res){ 
+	console.log("running switching option 11");
+        switchRelayEleven();
+	res.status(202).end();
+ });
+app.get('/functiontwelve/', function(req, res){ 
+	console.log("running switching option 12");
+        switchRelayTwelve();
+	res.status(202).end();
+ });
+app.get('/functionthirteen/', function(req, res){ 
+	console.log("running switching option 13");
+        switchRelayThirteen();
+	res.status(202).end();
+ });
+app.get('/functionon/', function(req, res){ 
+	console.log("running switching option on");
+        switchRelayOn();
+	res.status(202).end();
+ });
+app.get('/functionoff/', function(req, res){ 
+	console.log("running switching option off");
+        switchRelayOff();
+	res.status(202).end();
+ });
+
+
+
+app.listen(3000); 
+console.log('App Server running at port 3000');
